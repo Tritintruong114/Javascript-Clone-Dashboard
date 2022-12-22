@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Sono:wght@200;300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.cdnfonts.com/css/netflix-font" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <!-- Main nav -->
+
+    <div class="wrap main flex">
+      <img
+        id="poster-img"
+        src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+        alt=""
+      />
+      <ul class="ul">
+        <a href="/">Trending</a>
+        <a href="#">TV shows</a>
+        <a href="#">Movies</a>
+      </ul>
+      <div class="search-nav">
+        <button
+          onclick="showSearchDiv()"
+          id="searchbutton"
+          class="searchbutton"
+        >
+          Search
+        </button>
+        <input
+          id="input"
+          class="fa fa-search"
+          type="text"
+          placeholder="Search"
+        />
+      </div>
+    </div>
+    <!-- END -->
+
+    <!-- Right nav -->
+    <div class="mainContainer">
+      <div class="right">
+        <div class="right-nav menu">
+          <h3>Menu</h3>
+          <p>Home</p>
+          <p>Community</p>
+          <p>Discovery</p>
+          <p>Comming soon</p>
+        </div>
+        <div class="right-nav social">
+          <h3>Social</h3>
+          <p>Friends</p>
+          <p>Parties</p>
+          <p>Media</p>
+        </div>
+        <div class="right-nav general">
+          <h3>General</h3>
+          <p>Setting</p>
+          <p>Log out</p>
+        </div>
+      </div>
+
+      <!-- PAGE Start -->
+      <div id="page_container" class="page">
+        <div id="resultDiv" class="resultDivContainer"></div>
+        <div id="first_container" class="first-section">
+          <div id="main_content" class="main-inf">
+            <img
+              id="posterBanner"
+              src="https://i.ytimg.com/vi/GlmY-u3d4TI/maxresdefault.jpg"
+              alt=""
+            />
+            <img class="overlay" src="overlay.png" alt="" />
+            <div class="movie-info">
+              <h1 id="banner_title" class="movie-tilte title">DeadPool</h1>
+              <h4 id="banner_desc" class="movie-descripd">Action</h4>
+              <div class="main-button">
+                <button class="watchbtn">Watch</button>
+                <button class="addbtn">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="second-section">
+          <div class="second-title">
+            <h3>Best Actors</h3>
+            <div class="arrow-icon">
+              <i class="fa fa-chevron-left"></i>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          <div id="actor_container" class="second-container"></div>
+        </div>
+        <!-- Second-Section END -->
+
+        <!-- Third Section Start -->
+        <div class="third-section">
+          <!-- third-section-title -->
+          <div class="third-title">
+            <h3>Contunie Watching</h3>
+            <div class="arrow-icon">
+              <i class="fa fa-chevron-left"></i>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          <div id="continue_container" class="third-container">
+            <!-- <div class="third-content">
+              <img
+                id="contunie_watching_img"
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div>
+            <div class="third-content">
+              <img
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div>
+            <div class="third-content">
+              <img
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div> -->
+          </div>
+        </div>
+        <div class="third-section">
+          <!-- third-section-title -->
+          <div class="third-title">
+            <h3>Comedy</h3>
+            <div class="arrow-icon">
+              <i class="fa fa-chevron-left"></i>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          <div id="comedy_container" class="third-container"></div>
+        </div>
+        <div class="third-section">
+          <!-- third-section-title -->
+          <div class="third-title">
+            <h3>Action</h3>
+            <div class="arrow-icon">
+              <i class="fa fa-chevron-left"></i>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          <div id="action_container" class="third-container">
+            <!-- <div class="third-content">
+              <img
+                id="thirdImg"
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div>
+            <div class="third-content">
+              <img
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div>
+            <div class="third-content">
+              <img
+                src="https://www.galaxycine.vn/media/2021/7/16/deadpool1_1626446675539.jpg"
+                alt=""
+              />
+            </div> -->
+          </div>
+        </div>
+        <!-- Third Section End -->
+      </div>
+
+      <!-- PAGE End -->
+
+      <!-- LEFT Start -->
+      <div class="left">
+        <h3>Trendings</h3>
+        <div id="leftTrending" class="favourites-container">
+          <!-- <h3>Trendings</h3> -->
+        </div>
+        <button class="seebtn">See More</button>
+        <!-- <button class="searchbtn">Search</button> -->
+      </div>
+    </div>
+
+    <!-- LEFT End -->
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
